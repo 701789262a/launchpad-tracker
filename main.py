@@ -58,6 +58,7 @@ def tess(image):
 
 
 def buysellfunc(client, t):
+    print("buy")
     reit = 0  # counts reiteration of while cycle
     order = json.loads(client.order_market_buy(
         symbol=t['symbol'],
