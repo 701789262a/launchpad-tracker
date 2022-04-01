@@ -23,7 +23,7 @@ def main():
     with open("key.yaml") as f:
         t = yaml.safe_load(f)
         f.close()
-    # client = Client(t['bnb_apikey'], t['bnb_secret'])
+    client = Client(t['bnb_apikey'], t['bnb_secret'])
     while True:
         driver.delete_all_cookies()
         driver.get(url)
@@ -40,7 +40,7 @@ def main():
                 for line in f:
                     pass
                 last_line = line
-            if False:
+            if True:
                 a = Thread(target=buysellfunc, args=(client, t))
                 a.start()
                 a.join()
